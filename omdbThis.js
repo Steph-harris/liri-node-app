@@ -1,6 +1,9 @@
-debugger;
 var request = require("request");
 var movie = process.argv[3];
+
+if(movie === undefined){
+  movie = "mr.nobody";
+}
 
 request("http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&r=json&tomatoes=true", function (error, response, body) {
   if (!error && response.statusCode == 200) {
