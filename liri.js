@@ -1,1 +1,12 @@
-console.log("liri works");
+debugger;
+var keys = require("./keys.js");
+var task = process.argv[2];
+var twitterConsKey = twitterKeys.consumer_key;
+var twitterSecret = twitterKeys.consumer_secret;
+var twitterTokKey = twitterKeys.access_token_key;
+var twitterTokSecret = twitterKeys.access_token_secret;
+console.log(twitterSecret);
+console.log(twitterConsKey);
+console.log(twitterTokKey);
+console.log(twitterTokSecret);
+console.log(task);
