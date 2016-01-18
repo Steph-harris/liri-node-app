@@ -14,10 +14,12 @@ var client = new Twitter({
   access_token_secret: twitterTokSecret,
 });
 
-var params = {screen_name: "steph_harris21"};
 client.get('statuses/user_timeline', function(error, tweets, response){
   if(error) throw error;
-  console.log(tweets);  // The tweets. 
-  //console.log(response);  // Raw response object. 
+
+  for(var i = 0; i<tweets.length; i++){
+  console.log("On " + tweets[i].created_at + " I tweeted: " + tweets[i].text);  // The tweets. 
+  console.log();  // Raw response object. 
+  }
 });
 console.log(task);
