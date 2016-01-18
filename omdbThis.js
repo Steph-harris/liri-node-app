@@ -1,5 +1,5 @@
 var request = require("request");
-var movie = process.argv[3];
+//var movie = process.argv[3];
 
 if(movie === undefined){
   movie = "mr.nobody";
