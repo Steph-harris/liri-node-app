@@ -1,9 +1,9 @@
 debugger;
 var task = process.argv[2];
-var params = process.argv[3];
 var myTweets = require("./myTweets.js");
 var spotifyThis = require("./spotifyThis.js");
-//var omdbThis = require("./omdbThis.js");
+var omdbThis = require("./omdbThis.js");
+var doWhatever = require("./doWhatItSays.js")
 
 switch(task){
   case "my-tweets":
@@ -11,11 +11,15 @@ switch(task){
     break;
 
   case "spotify-this-song":
-    result = spotifyThis(params);
+    result = spotifyThis();
     break;
 
   case "movie-this":
     result = omdbThis();
     break;
+
+  case "do-what-it-says":
+    result = omdbThis();
+    break;
 }
-console.log(params);
+// console.log(result);
