@@ -1,7 +1,12 @@
-var fs = require("fs");
+module.exports = function(){
+  var fs = require("fs");
+  var liri = require("./liri.js");
 
-fs.readFile("random.txt", "utf8", function(error, data){
-  var splitIt = data.split(",")
-  console.log(splitIt[0]);
-  console.log(splitIt[1]);
-})
+  fs.readFile("random.txt", "utf8", function(error, data){
+    var splitIt = data.split(",");
+
+    task = (splitIt[0]);
+    process.argv[3] = (splitIt[1]);
+    doWhat();
+  });
+}
