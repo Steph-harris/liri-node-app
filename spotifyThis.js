@@ -1,4 +1,4 @@
-//turn this into a function to use from liri.js
+// takes in a song and returns spotify info
 module.exports = function(){
   var spotify = require('spotify');
   var song = process.argv[3];

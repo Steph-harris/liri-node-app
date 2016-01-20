@@ -1,3 +1,4 @@
+// returns my tweets from twitter
 module.exports = function(){ 
   var Twitter = require("twitter");
   var keys = require("./keys.js");

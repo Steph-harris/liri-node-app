@@ -1,3 +1,4 @@
+// takes in a movie and returns info from the omdb database
 module.exports = function(){
   var request = require("request");
   var movie = process.argv[3];
