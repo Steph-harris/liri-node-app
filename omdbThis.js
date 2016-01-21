@@ -19,6 +19,11 @@ module.exports = function(){
       console.log(returnedMovie.Actors);
       console.log(returnedMovie.tomatoRating);
       console.log(returnedMovie.tomatoURL);
+
+      fs.appendFile("log.txt", returnedMovie.Title, (err) => {
+    if (err) throw err;
+    console.log("data added");
+  });
     }
   });
 }

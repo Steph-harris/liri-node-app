@@ -6,6 +6,10 @@ var spotifyThis = require("./spotifyThis.js");
 var omdbThis = require("./omdbThis.js");
 
 function doWhat(){
+  fs.appendFile("log.txt", task + ", ", (err) => {
+    if (err) throw err;
+    console.log("data added");
+  });
   switch(task){
     case "my-tweets":
       result = myTweets();
@@ -24,7 +28,10 @@ function doWhat(){
       break;
   }
 }
-
+// fs.appendFile('message.txt', 'data to append', (err) => {
+//   if (err) throw err;
+//   console.log('The "data to append" was appended to file!');
+// });
 function doWhatever(){
   fs.readFile("random.txt", "utf8", function(error, data){
       var splitIt = data.split(",");
